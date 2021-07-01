@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /go-rest-api 
+RUN go build -o go-rest-api main.go
 
 EXPOSE 9000
 

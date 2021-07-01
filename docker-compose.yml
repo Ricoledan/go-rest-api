@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  api:
+    container_name: golang-api
+    build:
+      context: .
+    environment:
+      ENV: dev
+    env_file: .env
+    depends_on:
+      - db
+    ports:
+      - '9000:9000'
+    volumes:
+      - ./:/src
+  db:
+    image: postgres:13.2-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: docker
+    restart: unless-stopped
+    ports:
+      - '5432:5432'
+    volumes:
+      - go-service-data:/var/lib/postgresql/data
+volumes:
+  go-service-data:
+  es-data:
+    driver: local
