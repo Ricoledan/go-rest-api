@@ -13,7 +13,7 @@ type Profile struct {
 	Level     string
 	Type      string
 	Attribute string
-	Field     [string]
+	Field     []string
 	Group     []string
 	Technique []Technique
 	Artwork   string
@@ -32,7 +32,7 @@ var profileList = []*Profile{
 		Attribute: "Vaccine",
 		Field:     "Metal Empire", "Nature Spirits", "Virus Busters", "Unknown", "Dragon's Roar", "Nightmare Soldiers",
 		Group: nil,
-		Technique: []*Technique{
+		Technique: []Technique{
 			Name:        "Baby Flame",
 			Description: "Releases a stream of fire from its mouth.",
 		},
@@ -49,7 +49,7 @@ var profileList = []*Profile{
 		Attribute: "Vaccine",
 		Field:     "Metal Empire", "Nature Spirits", "Virus Busters", "Unknown", "Dragon's Roar", "Nightmare Soldiers",
 		Group: nil,
-		Technique: []*Technique{
+		Technique: []Technique{
 			Name:        "Baby Flame",
 			Description: "Releases a stream of fire from its mouth.",
 		},
