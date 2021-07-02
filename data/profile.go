@@ -8,19 +8,19 @@ type Technique struct {
 }
 
 type Profile struct {
-	ID        int
-	Name      string
-	Level     string
-	Type      string
-	Attribute string
-	Fields     []string
-	Group     []string
-	Techniques []Technique
-	Artwork   string
-	Profile   string
-	CreatedAt string
-	UpdatedAt string
-	DeletedAt string
+	ID         int         `json:"id"`
+	Name       string      `json:"name"`
+	Level      string      `json:"level"`
+	Type       string      `json:"type"`
+	Attribute  string      `json:"attribute"`
+	Fields     []string    `json:"fields"`
+	Group      []string    `json:"group"`
+	Techniques []Technique `json:"techniques"`
+	Artwork    string      `json:artwork`
+	Profile    string      `json:profile`
+	CreatedAt  string      `json:createdAt`
+	UpdatedAt  string      `json:updatedAt`
+	DeletedAt  string      `json:deletedAt`
 }
 
 var profileList = []*Profile{
@@ -30,8 +30,8 @@ var profileList = []*Profile{
 		Level:     "Child",
 		Type:      "Reptile",
 		Attribute: "Vaccine",
-		Fields:     ["Metal Empire", "Nature Spirits", "Virus Busters", "Unknown", "Dragon's Roar", "Nightmare Soldiers"],
-		Group: [nil],
+		Fields:    ["Metal Empire", "Nature Spirits", "Virus Busters", "Unknown", "Dragon's Roar", "Nightmare Soldiers"],
+		Group: nil,
 		Techniques: []Technique{
 			Name:        "Baby Flame",
 			Description: "Releases a stream of fire from its mouth.",
@@ -47,7 +47,7 @@ var profileList = []*Profile{
 		Level:     "Child",
 		Type:      "Reptile",
 		Attribute: "Vaccine",
-		Fields:     ["Metal Empire", "Nature Spirits", "Virus Busters", "Unknown", "Dragon's Roar", "Nightmare Soldiers"],
+		Fields:    ["Metal Empire", "Nature Spirits", "Virus Busters", "Unknown", "Dragon's Roar", "Nightmare Soldiers"],
 		Group: nil,
 		Techniques: []Technique{
 			Name:        "Baby Flame",

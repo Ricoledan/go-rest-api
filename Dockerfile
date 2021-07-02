@@ -12,4 +12,4 @@ RUN go build -o go-rest-api main.go
 
 EXPOSE 9000
 
-CMD ["/go-rest-api"]
+CMD ["./go-rest-api"]
