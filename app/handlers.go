@@ -10,3 +10,9 @@ func (a *App) IndexHandler() http.HandlerFunc {
 		fmt.Fprintf(w, "YERR")
 	}
 }
+
+func (a *App) ProfileHandler() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "LIST PROFILES")
+	}
+}

@@ -17,4 +17,5 @@ func New() *App {
 
 func (a *App) initRoutes() {
 	a.Router.HandleFunc("/", a.IndexHandler()).Methods("GET")
+	a.Router.HandleFunc("/api/profiles", a.ProfileHandler()).Methods("GET")
 }
