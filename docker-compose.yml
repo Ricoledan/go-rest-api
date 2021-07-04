@@ -25,5 +25,4 @@ services:
       - go-service-data:/var/lib/postgresql/data
 volumes:
   go-service-data:
-  es-data:
     driver: local
