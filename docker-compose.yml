@@ -3,7 +3,7 @@ services:
   api:
     container_name: golang-api
     build:
-      context: ./
+      context: .
     environment:
       ENV: dev
     env_file: .env
